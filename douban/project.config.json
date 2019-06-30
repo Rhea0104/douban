@@ -1,0 +1,81 @@
+{
+	"miniprogramRoot": "miniprogram/",
+	"cloudfunctionRoot": "cloudfunctions/",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"nodeModules": true
+	},
+	"appid": "wxe701fb5622ce9a37",
+	"projectname": "douban",
+	"libVersion": "2.2.5",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 5,
+			"list": [
+				{
+					"id": -1,
+					"name": "db guide",
+					"pathName": "pages/databaseGuide/databaseGuide",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "买票",
+					"pathName": "pages/comment/comment",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "买票",
+					"pathName": "pages/comment/comment",
+					"query": "id=1291561",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "城市",
+					"pathName": "pages/city/city",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pl",
+					"pathName": "pages/myComment/myComment",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "评论",
+					"pathName": "pages/myComment/myComment",
+					"scene": null
+				}
+			]
+		}
+	}
+}
