@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/movie/movie",
+    "pages/my/my",
+    "pages/comment/comment",
+    "pages/address/address",
+    "pages/myComment/myComment"
+  ],
+  "window": {
+    "backgroundColor": "#f6f6f6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#e54847",
+    "navigationBarTitleText": "猫眼电影",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#e54847",
+    "list": [
+      {
+        "pagePath": "pages/movie/movie",
+        "text": "电影",
+        "iconPath": "images/movie.png",
+        "selectedIconPath": "images/movie_selected.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my_selected.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

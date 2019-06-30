@@ -1,0 +1,54 @@
+<!--pages/comment/comment.wxml-->
+<view>
+  <!-- 电影图片 -->
+  <view class="detail-container" style="background:url({{detail.images.large}}) no-repeat top"></view>
+  <view class="detail-mask"></view>
+  <!-- 电影介绍 -->
+  <view class="detail-info">
+    <image class="detail-image" src="{{detail.images.large}}"></image>
+    <view class="detail">
+      <!-- 电影标题 -->
+      <view class="detail-nm">{{detail.title}}</view>
+      <!-- 电影源标题 -->
+      <view class="">{{detail.original_title}}</view>
+      <!-- 电影打分 -->
+      <view class="detail-sc">{{detail.rating.average}}分</view>
+      <!-- 电影国家 -->
+      <view>{{detail.countries[0]}}/{{detail.durations[0]}}</view>
+      <!-- 电影导演 -->
+      <view>导演：{{detail.directors[0].name}}</view>
+      <!-- 电影上映时间 -->
+      <view>{{detail.mainland_pubdate}}上映</view>
+    </view>
+  </view>
+  <!-- 电影描述 -->
+  <view class="desc">{{detail.summary}}</view>
+  <!-- 演员表 -->
+  <view class="actor">
+    <view class="actor_title">演职人员</view>
+    <view class="actor-img">
+      <view>
+        <image src="{{detail.writers[0].avatars.small}}"></image>
+        <view>{{detail.writers[0].name}}</view>
+      </view>
+      <view wx:for="{{detail.casts}}" wx:key="index">
+        <image src="{{item.avatars.large}}"></image>
+        <view>{{item.name}}</view>
+      </view>  
+    </view> 
+  </view>
+  <!-- 评论 -->
+  <view class="comment">观众评论</view>
+  <view  wx:for="{{list}}" wx:key="{{index}}">
+    <van-panel desc="评论时间:{{item.time}}" status="id：{{item.name}}">
+      <view>{{item.content}}</view>
+    </van-panel>
+    <view class="comment_img">
+      <view class="comment-img" wx:for="{{item.fileIds}}" wx:key="{{index}}" >
+        <image src="{{item}}"></image>
+      </view>
+    </view>
+    
+  </view>
+</view>
+<van-button class="btn" size='large' type="danger" bindtap='jumpMyComment'>影片评价</van-button>

@@ -1,0 +1,27 @@
+/* pages/myComment/myComment.wxss */
+/* 打分 */
+.comment{
+  height: 100%;
+  width:100%;
+  
+}
+.detail .detail-sc{
+  color: #fc0;
+  font-size: 36rpx;
+  font-weight: 700;
+  margin:0 auto;
+}
+.star{
+  font-size: 28rpx;
+  padding: 10rpx;
+  color:gray;
+  text-align: center;
+}
+.star_star{
+  text-align: center;
+}
+.comment-img{
+  width: 200rpx;
+  height:200rpx;
+  margin-right: 20rpx;
+}

@@ -1,0 +1,22 @@
+<!--pages/myComment/myComment.wxml-->
+<view class="comment">
+  
+  <!-- 打分 vant -->
+  <view class="star">请滑动星星评分</view>
+  <view class="star_star">
+    <van-rate value="{{score}}" bind:change="onScoreChange" size="40"/>
+  </view>
+  <!-- 评价 vant -->
+  <van-field value="{{content}}" placeholder="写一些评论" bind:change="onContentChange"/>
+  <!-- 图片列表 -->
+  <view>
+    <image class="comment-img" wx:for="{{images}}" wx:key="{{index}}" src="{{item}}"></image>
+  </view>
+  <!-- 上传图片按钮 vant -->
+  <van-button type="warning" bindtap="uploadImg" size="large">上传图片</van-button>
+
+  <!-- 提交评价 -->
+  <van-button size="large" type="danger" bindtap='submit'>提交评价
+  </van-button>
+</view>
+  

@@ -1,0 +1,33 @@
+<!--pages/movie/movie.wxml-->
+<view class="title">
+  <van-nav-bar title="电影列表" left-text="{{city}}" bindtap="onClickLeft">
+    <van-icon name="search" slot="right" class="icon" />
+  </van-nav-bar>
+</view>
+<!--一部电影区域-->
+<view class="movie" wx:for="{{movielist}}" wx:key="index">
+  <!-- 电影图片 -->
+  <image class="movie-img" src="{{item.images.small}}"></image>
+  <!-- 电影介绍 -->
+  <view class="movie-info">
+    <!-- 电影标题 -->
+    <view class="movie-title">{{item.title}}</view>
+    <!-- 观众评分 -->
+    <view>观众影评：
+      <text class="movie-score">{{item.rating.average}}</text>
+    </view>
+    <!-- 主演：多位 -->
+    <view>主演：
+      <text wx:for="{{(item.casts)}}" wx:key="index" decode='true'>{{item.name}}&nbsp;&nbsp;</text> 
+    </view>
+    <!-- 年份 -->
+    <view>上映时间：
+      <text>{{item.pubdates[item.pubdates.length-1]}}</text>
+    </view>
+    <view>时长：
+      <text>{{item.durations[item.durations.length-1]}}</text>
+    </view>
+    <!-- 详情按钮 -->
+    <button class="movie-comment" bindtap='jumpComment' data-movieid="{{item.id}}">电影详情</button>
+  </view>
+</view>

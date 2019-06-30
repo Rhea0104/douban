@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "van-nav-bar": "vant-weapp/nav-bar/index",
+    "van-field": "vant-weapp/field/index",
+    "van-rate": "vant-weapp/rate/index",
+    "van-button": "vant-weapp/button/index",
+    "van-panel": "vant-weapp/panel/index",
+    "van-card": "vant-weapp/card/index"
+  }
+}
